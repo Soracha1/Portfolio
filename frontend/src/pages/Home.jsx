@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebook, FaLine, FaDiscord, FaEnvelope } from 'react-icons/fa';
 import './Home.css';
 
-// นำเข้าไฟล์ Resume และรูป Profile
-import resumePdf from '../assets/resume.pdf';
-import profileImage from '../assets/new.jpg';
+// หมายเหตุ: ย้ายไฟล์ไปที่โฟลเดอร์ public/ แล้วใช้ Path แบบ Absolute (`/new.jpg`, `/resume.pdf`)
+// จึงไม่จำเป็นต้องใช้ import จาก ../assets อีกต่อไป เพื่อป้องกันปัญหา 404 ตอน Deploy
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
@@ -17,7 +16,7 @@ export default function Home() {
       .then(data => setProjects(data))
       .catch(() => {
         setProjects([
-          { id: 1, title: "NewsAI", stack: "Gemini AI / Make.com" },
+          { id: 1, title: "AI-driven LINE Chatbot", stack: "N8N / JavaScript" },
           { id: 2, title: "DressRental", stack: "ASP.NET Core / SQL Server" },
           { id: 3, title: "SHARK SOUND", stack: "React / JavaScript" }
         ]);
@@ -31,7 +30,7 @@ export default function Home() {
       <section className="bento-card hero-card">
         <div className="profile-image-container">
           <img
-            src={profileImage}
+            src={`${process.env.PUBLIC_URL || ''}/new.jpg`}
             alt="Soracha Profile"
             className="profile-img"
           />
@@ -65,7 +64,7 @@ export default function Home() {
           <h3 className="card-title-large">CV / Resume</h3>
 
           <a
-            href={resumePdf}
+            href={`${process.env.PUBLIC_URL || ''}/resume.pdf`}
             className="btn-white-large"
             target="_blank"
             rel="noreferrer"
@@ -129,4 +128,3 @@ export default function Home() {
     </main>
   );
 }
-
