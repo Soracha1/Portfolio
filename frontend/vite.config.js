@@ -3,5 +3,5 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Portfolio/',
+  base: '/', // ต้องเป็นเครื่องหมาย / เปล่าๆ
 })
