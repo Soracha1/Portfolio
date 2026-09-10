@@ -19,7 +19,7 @@ export default function Projects() {
     },
     { 
       id: 3, 
-      title: "document_library", 
+      title: "Document Library", 
       stack: "Web Application", 
       desc: "ระบบจัดการและจัดเก็บเอกสาร",
       link: "https://github.com/Soracha1/document_library" 
@@ -33,7 +33,7 @@ export default function Projects() {
     },
     { 
       id: 5, 
-      title: "chatbot", 
+      title: "Chatbot", 
       stack: "LINE Chatbot / AI", 
       desc: "ระบบแชทบอทอัตโนมัติ (Automation / AI)",
       link: "https://github.com/Soracha1/Chatbot-" 

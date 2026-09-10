@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// นำเข้าไอคอนของจริงจาก react-icons/fa (FontAwesome)
 import { FaInstagram, FaFacebook, FaLine, FaDiscord, FaEnvelope } from 'react-icons/fa';
 import './Home.css';
-
-// หมายเหตุ: ย้ายไฟล์ไปที่โฟลเดอร์ public/ แล้วใช้ Path แบบ Absolute (`/new.jpg`, `/resume.pdf`)
-// จึงไม่จำเป็นต้องใช้ import จาก ../assets อีกต่อไป เพื่อป้องกันปัญหา 404 ตอน Deploy
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
@@ -30,7 +26,7 @@ export default function Home() {
       <section className="bento-card hero-card">
         <div className="profile-image-container">
           <img
-            src={`${process.env.PUBLIC_URL || ''}/public/new.jpg`}
+            src={`${import.meta.env.BASE_URL}new.jpg`}
             alt="Soracha Profile"
             className="profile-img"
           />
@@ -62,9 +58,8 @@ export default function Home() {
 
         <section className="bento-card center-content">
           <h3 className="card-title-large">CV / Resume</h3>
-
           <a
-            href={`${process.env.PUBLIC_URL || ''}/resume.pdf`}
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             className="btn-white-large"
             target="_blank"
             rel="noreferrer"
@@ -98,10 +93,8 @@ export default function Home() {
       <section className="bento-card contact-box">
         <div className="card-header">
           <h3 className="card-title-left">Let's Connect</h3>
-
         </div>
         <div className="contact-grid">
-          {/* ใช้ไอคอนของจริงแทน span emoji เดิม */}
           <a href="https://www.instagram.com/rewsrch/" target="_blank" rel="noreferrer" className="social-card ig">
             <FaInstagram className="social-icon" />
             <span className="social-name">Instagram</span>

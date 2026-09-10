@@ -287,3 +287,30 @@
     font-size: 2.8rem; 
   }
 }
+/* เพิ่มลูกเล่นขยับเมื่อเอาเมาส์ชี้สำหรับหน้า Home */
+.btn-blue, .btn-white-large, .social-card, .project-mini-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-blue:hover, .btn-white-large:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+.btn-blue:active, .btn-white-large:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.project-mini-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.social-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.social-card:active {
+  transform: translateY(-1px) scale(0.99);
+}
