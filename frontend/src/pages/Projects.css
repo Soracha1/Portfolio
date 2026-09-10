@@ -1,0 +1,72 @@
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.page-heading {
+  text-align: center;
+}
+
+.page-heading h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.page-heading p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.projects-grid-full {
+  display: grid;
+  gap: 24px;
+}
+
+.project-detail-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 40px;
+  text-align: left; /* บังคับชิดซ้ายให้อ่านง่าย */
+}
+
+.project-detail-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.pill-blue {
+  display: inline-block;
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.project-detail-card p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid #3f3f46;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-outline:hover {
+  background: var(--border-color);
+}

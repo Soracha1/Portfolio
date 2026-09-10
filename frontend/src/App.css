@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-main: #09090b;       /* ดำสนิทขึ้น */
+  --bg-card: #18181b;       /* เทาเข้มสำหรับกล่อง */
+  --bg-nav: rgba(24, 24, 27, 0.8);
+  --text-primary: #fafafa;  /* ขาวสว่าง (แก้ปัญหาตัวหนังสือดำ) */
+  --text-secondary: #a1a1aa; /* เทาอ่อนสำหรับเนื้อหา */
+  --border-color: #27272a;
+  --accent-blue: #3b82f6;
+  --accent-blue-hover: #2563eb;
+  --btn-white: #fafafa;
+  --btn-white-hover: #e4e4e7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+/* บังคับให้หัวข้อทุกอันเป็นสีสว่าง แก้ปัญหาตัวหนังสือดำในรูป */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 900px;
+  padding: 120px 20px 40px;
+  flex: 1;
+}
+
+.global-footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.animate-fade {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
