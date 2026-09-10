@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebook, FaLine, FaDiscord, FaEnvelope } from 'react-icons/fa';
 import './Home.css';
 
+// นำเข้าไฟล์ Resume และรูป Profile
+import resumePdf from '../assets/resume.pdf';
+import profileImage from '../assets/new.jpg';
+
 export default function Home() {
   const [projects, setProjects] = useState([]);
 
@@ -22,21 +26,21 @@ export default function Home() {
 
   return (
     <main className="home-layout animate-fade">
-      
+
       {/* 1. Hero Section + Profile Picture */}
       <section className="bento-card hero-card">
         <div className="profile-image-container">
-          <img 
-            src="src/assets/new.jpg" 
-            alt="Soracha Profile" 
-            className="profile-img" 
+          <img
+            src={profileImage}
+            alt="Soracha Profile"
+            className="profile-img"
           />
         </div>
         <div className="hero-text">
           <h1 className="hero-title">I'm <span className="gradient-text">Soracha</span></h1>
           <h2 className="hero-subtitle">Computer Science & Software Development @ Sripatum University</h2>
           <p className="hero-desc">
-            นักพัฒนาซอฟต์แวร์จากกรุงเทพมหานคร ที่หลงใหลในการสร้าง Full-Stack Web App, การจัดการ Database และการผสานรวม AI เข้ากับระบบอัตโนมัติ
+            A Bangkok-based software developer passionate about building full-stack web applications, managing databases, and integrating AI into automation systems.
           </p>
           <a href="https://github.com/Soracha1" target="_blank" rel="noreferrer" className="btn-blue">
             GitHub Profile ↗
@@ -59,7 +63,15 @@ export default function Home() {
 
         <section className="bento-card center-content">
           <h3 className="card-title-large">CV / Resume</h3>
-          <a href="#" className="btn-white-large">Download PDF ↓</a>
+
+          <a
+            href={resumePdf}
+            className="btn-white-large"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Resume ↗
+          </a>
         </section>
       </div>
 
@@ -72,7 +84,7 @@ export default function Home() {
           </div>
           <Link to="/projects" className="link-blue">View All Projects ↗</Link>
         </div>
-        
+
         <div className="projects-preview">
           {projects.map((project) => (
             <div className="project-mini-card" key={project.id}>
@@ -86,8 +98,8 @@ export default function Home() {
       {/* 4. Contact Section */}
       <section className="bento-card contact-box">
         <div className="card-header">
-           <h3 className="card-title-left">Let's Connect</h3>
-  
+          <h3 className="card-title-left">Let's Connect</h3>
+
         </div>
         <div className="contact-grid">
           {/* ใช้ไอคอนของจริงแทน span emoji เดิม */}
@@ -117,3 +129,4 @@ export default function Home() {
     </main>
   );
 }
+
