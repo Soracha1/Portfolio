@@ -30,7 +30,7 @@ export default function Home() {
       <section className="bento-card hero-card">
         <div className="profile-image-container">
           <img
-            src={`${process.env.PUBLIC_URL || ''}/new.jpg`}
+            src={`${process.env.PUBLIC_URL || ''}/public/new.jpg`}
             alt="Soracha Profile"
             className="profile-img"
           />
